@@ -1,0 +1,20 @@
+{
+  "name": "Scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && yarn permissions && yarn link",
+    "permissions": "find ./dist -type d -exec chmod 755 {} +"
+  },
+  "bin": {
+    "autogit": "./dist/code/autoGit.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "simple-git": "^3.9.0"
+  }
+}
